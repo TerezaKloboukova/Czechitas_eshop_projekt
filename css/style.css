@@ -1,0 +1,357 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+*
+:after, :before {
+    box-sizing: inherit;
+}
+
+:root {
+    --primary: #224B0C;
+    --secondary: #285430;
+    --yellow: #FF9F29;
+}
+
+body {
+	margin: 0 auto;
+	background-color: white;
+    font-size: 18px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 42px;
+}
+
+p {
+    font-size: 24px;
+}
+
+/*
+ **************************************
+	CONTANT
+ **************************************
+*/
+.contant {
+    max-width: 66rem;
+    margin: 0 auto;
+}
+
+/*
+ **************************************
+	MENU
+ **************************************
+*/
+.logo {
+    font-size: larger;
+    font-weight: bolder;
+    padding-left: 20px;
+    display: inline-block;
+    padding-top: 20px;
+}
+.trolley {
+    width: 2%;
+    height: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    float: right;
+}
+.menu__checkbox {
+    position: absolute;
+    left: -9999px;
+}
+
+.menu__toggler {
+    cursor: pointer;
+}
+
+.menu__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: aquamarine;
+}
+
+.menu__item {
+    border: 1px solid white;
+}
+
+.menu__link {
+    display: block;
+    padding: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.menu__link:hover {
+    background-color: var(--secondary);
+    border-radius: 10%;
+    color: white;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+    display: block;
+}
+
+@media screen and (min-width: 800px) {
+    .menu__toggler {
+        display: none;
+    }
+    .menu__list {
+        display: flex !important;
+        justify-content: center;
+        font-weight: 600;
+    }
+
+    .menu__list {
+        background-color: white
+    }
+}
+/*
+ **************************************
+	Tady jsem změnšila obrázek, abych nemusela scrolova (podle projektu Penzion), ALE asi ho budu muset mít stejně v gridu!
+ **************************************
+*/
+.hero__picture {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/*
+ **************************************
+	CONTANT
+ **************************************
+*/
+.contant {
+    max-width: 66rem;
+    margin: 0 auto;
+}
+
+/*
+ **************************************
+	3 ICONS
+ **************************************
+*/
+.container__firstIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.container__icon {
+    display: flex;
+    flex-wrap: wrap;
+    width: cover;
+    height: auto;
+    margin: 5%;
+}
+
+.icon__description {
+    align-self: center;
+    font-size: 1rem;
+    padding: 15px;
+}
+
+/*
+ **************************************
+    3 PRODUCTS
+ **************************************
+*/
+.suply {
+    margin: auto;
+}
+
+.products {
+    display: flex;
+    position: relative;
+}
+
+.products--left .products__title {
+    position: absolute;
+    left: 30%;
+    bottom: 45%;
+    padding: 0;
+    margin: 0;
+}
+
+.products--left .products__text {
+    position: absolute;
+    left: 30%;
+    bottom: 35%;
+    padding: 0;
+    margin: 0;
+}
+
+.products__image {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+}
+
+.products--right {
+    flex-direction: row-reverse;
+}
+
+.products__image:hover {
+    transform:rotate(15deg);
+}
+
+
+.products--right .products__title {
+    position: absolute;
+    left: 55%;
+    bottom: 45%;
+    padding: 0;
+    margin: 0;
+}
+
+.products--right .products__text {
+    position: absolute;
+    right: 31%;
+    bottom: 30%;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+ **************************************
+	NOVINKY Z NAŠÍ DÍLNY
+ **************************************
+*/
+.header--new {
+    text-align: center;
+    font-weight: 800;
+}
+
+.new {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*
+ **************************************
+	MEDIA QUERIES
+ **************************************
+*/
+
+@media screen and (max-width: 600px) {
+    body {
+        max-width: 580px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container__icon img {
+        max-height: 50%;
+        flex-direction: column;
+    }
+    
+    .container__icon {
+        margin: 0;
+    }
+
+    .icon__description {
+        margin: 0;
+        padding-left: 10px;
+    }
+    .products__image {
+        max-width: 40%;
+        height: auto;
+    }
+
+    .products--left .products__text {
+        position: absolute;
+        bottom: 25%;
+    }
+
+    .products--right .products__text {
+        position: absolute;
+        bottom: 25%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .products--left .products__text {
+        position: absolute;
+        bottom: 15%;
+    }
+
+    .products--right .products__text {
+        position: absolute;
+        bottom: 20%;
+    }
+}
+
+/*
+ **************************************
+	FOOTER
+ **************************************
+*/
+.center-line {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .center-line hr {
+    border: none;
+    border-top: 1px solid black;
+    width: 30%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.social_media {
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+}
+
+.social_media img {
+    display: block;
+    max-width: 30px;
+    height: auto;
+    padding: 10px;
+  }
+
+.footer__text p {
+    font-size: small;
+    margin: 0.75px;
+    text-align: center;
+}
+
+.footer__copyright {
+    font-size: small;
+    margin: 20px;
+    text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+    .social_media img {
+        max-width: 15px;
+        height: auto;
+        padding: 5px;
+    }
+}
+
+

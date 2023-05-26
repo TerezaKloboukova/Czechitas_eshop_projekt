@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Náš příběh</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600&family=Hahmlet:wght@500&family=Inter&family=JetBrains+Mono&family=Montserrat:wght@300;400;500&family=Nunito:wght@400;700&family=Playfair+Display:wght@600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="menu">
+
+        <input type="checkbox" class="menu__checkbox" id="menu--checkbox">
+        <label for="menu--checkbox" class="menu__toggler">☰</label>
+    
+        <label class="logo">Campaigner</label>
+        <img class="trolley" src="/images/trolley.png">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link" href="/">Domů</a></li>
+          <li class="menu__item"><a class="menu__link" href="/kabelky/">Kabelky</a></li>
+          <li class="menu__item"><a class="menu__link" href="/kufriky/">Kufříky</a></li>
+          <li class="menu__item"><a class="menu__link" href="/batohy/">Batohy</a></li>
+          <li class="menu__item"><a class="menu__link" href="/story/">Příbeh</a></li>
+          <li class="menu__item"><a class="menu__link" href="/kontakt/">Kontakt</a></li>
+        </ul>
+    
+      </nav>
+
+      <main>
+      {{ content | safe }}
+      </main>
+
+       <!--FOOTER-->
+      <footer>
+        <div class="center-line">
+            <hr>
+        </div>
+        <div class="social_media"><a href="https://www.instagram.com/">
+            <img src="/images/instagram-logo.svg" alt="Instagram Icon">
+            </a>
+            <a href="https://www.instagram.com/">
+                <img src="/images/facebook_icon.png" alt="Facebook Icon">
+                </a>
+        </div>
+        <div class="footer__text">
+            <p>Obchodní podmínky</p><br>
+            <p>Ochrana osobních údajů</p><br>
+            <p>Vrácení zboží</p>
+        </div>
+        <div class="footer__copyright">
+            &copy;2023, Tereza Klobouková
+        </div>
+    </footer>
+    
+    </body>
+    </html>
